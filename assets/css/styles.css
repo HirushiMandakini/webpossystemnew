@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    padding: 0;
+    overflow: hidden;
+}
+
+
+:root {
+    --blush-pink: #FFC0CB;
+    --lavender: #E6E6FA;
+    --mint-green: #98FF98;
+    --sunny-yellow: #FFD700;
+    --rose-red: #FF007F;
+    --white: #FFFFFF;
+    --purple: #DC84F3;
+    --purple2:#AD88C6;
+  }
+
+  /*loadingsceen*/
+  .loading-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../pexels-moose-photos-170195-1038001.jpg') center center no-repeat;
+    filter: blur(2px); /* Adjust the blur radius as needed */
+}
+
+.loader {
+    z-index: 99;
+    border: 20px solid var(--lavender); /* Light grey border */
+    border-top: 20px solid var(--rose-red); /* Yellow border */
+    border-radius: 50%; /* Circular shape */
+    width: 180px; /* Width of the loader */
+    height: 180px; /* Height of the loader */
+    animation: spin 2s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start position of the rotation */
+    100% { transform: rotate(360deg); } /* End position of the rotation */
+}
+
+/*end-loadingsceen*/
+/*navbar*/
+#navBar {
+    background-color: var(--blush-pink);
+    position: relative;
+}
+
+  .custom-navbar .navbar-nav .nav-link {
+    line-height: 60px; 
+  }  
+
+.navbar-nav .nav-link {
+    color: var(--rose-red); 
+    font-size: 19px;
+}
+
+.navbar-nav.nav-right {
+    margin-left: auto;
+  }
+  
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration : none;
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--sunny-yellow);
+    color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: width 0.5s ease; /* Only transition the width property */
+}
+
+.navbar ul li a {
+    color: black;
+    transition: color 0.5s ease; /* Transition the color property */
+}
+
+.navbar ul li a:hover {
+    color: var(--lavender);
+}
+/*end-navbar*/
+/*home*/
+.home {
+    padding: 100px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; /* Ensure the blur doesn't overflow */
+}
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../homebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px); /* Add a small blur effect (adjust the value as needed) */
+    z-index: -1;
+}
+.maincontainer {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    padding: 40px;
+    background-color: var(--lavender);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.flower-image {
+    width: 100%; /* Adjust the percentage value as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    display: block; /* Prevent inline spacing */
+    margin: 0 auto; /* Center the image horizontally */
+}
+.subonetext {
+    font-size: 100px;
+    font-family: 'Parisienne', cursive;
+    color: var(--rose-red);
+}
+.subtitle {
+    font-size: 18px; /* Adjust font size */
+    color: #333333; /* Adjust color */
+    /* Add other styles as needed */
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+.shop-button {
+    background-color: var(--purple); /* Background color */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add some rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.shop-button:hover {
+    background-color: var(--rose-red); /* Change background color on hover */
+}
+/*end-Home*/
+/*Customer*/
+.customer1{
+    display:flex;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url(../lily.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cuscard{
+    width: 500px;
+    height: 700px;
+    padding: 20px 20px 20px 20px;
+    background-color: var(--lavender);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.cuscard-header {
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+#customer_btn {
+    margin-top: 10px;
+}
+.cuscard .form-label {
+    margin-top: 1rem; /* Adjust the value as needed */
+}
+.custom-margin {
+    margin-top: 1rem; /* Adjust the value as needed */
+}
+.form-control {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--purple2);
+    justify-content: right;
+    margin-left: 50px;
+}
+.custablecard{
+    width: 600px;
+    padding: 10px 20px 20px 20px;
+    background-color: var(--lavender);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.custable-color>tr>th{
+    background-color: #3468C0;
+    color: #ffffff;
+}
+.order-table>tr>th{
+    margin-top: 20px;
+    background-color: #3468C0;
+    color: #ffffff;
+}
+
+.custable{
+    width: 560px;
+}
+.cussearchField{
+    width: 300px;
+    margin: 30px;
+}
+.searchBtn{
+    margin: 30px;
+    margin-left: 1px;
+}
+/*end-cutomer*/
+.col{
+    height: 80px;
+}
+
+/*item*/
+.item1{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-image: url(../flat-lay-gift-concept.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.itemcard{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 500px;
+    height: 700px;
+    padding: 20px 20px 20px 20px;
+    background-color: var(--lavender);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:10px;
+}
+.itemcard-header {
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+#item_btn {
+    margin-top: 20px;
+}
+.itemtablecard{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 600px;
+    padding: 10px 20px 20px 20px;
+    background-color: var(--lavender);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.itemtable-color>tr>th{
+    background-color: #3468C0;
+    color: #ffffff;
+}
+.detail-table-color>tr>th{
+    background-color: #3468C0;
+    color: #ffffff;
+}
+.itemtable{
+    width: 560px;
+}
+.itemsearchField{
+    width: 300px;
+    margin: 30px;
+}
+/*end-item*/
+
+/*order details*/
+#invoiceDetails{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 500px;
+    height: 700px;
+    left:  700px;
+}
+#orderDetails1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.order1{
+    gap: 30px;
+    margin-bottom:20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-image: url(../rose.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.order_details1{
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.d-flex {
+    background-color: var(--lavender);
+    display: cover;
+    width: vw-auto;
+}
+.searchbar{
+    width: 1000px;
+    margin: 30px;
+}
+.ordersearchField {
+    width: 600px;
+}
+
+#orderDetailsForm{
+    align-items: center;
+    width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#order-details-table{
+    width: 1200px;
+}
+
+.ordercard{
+    width: 500px;
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var(--lavender);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.ordercard-header {
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+#order_item_btn,
+#order_btn {
+    margin-top: 10px;
+}
+.custom-margin .form-select {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--purple2);
+    justify-content: right;
+    margin-left: 50px;
+  }
+  /*--------*/
+
+
+/**/
+
+/*buttions css*/
+.customer-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.cus-btn{
+   margin-top: 40px;
+}
+
+.btn-outline-success{
+    border: 0px;
+    background-color: #387ADF;
+    color: var(--white);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-outline-success:hover{
+    background-color: rgb(58, 90, 187);
+}
+
+.btn-outline-primary{
+    border: 0px;
+    background-color: #0D9276;
+    color: var(--white);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-outline-primary:hover{
+    background-color: #096b56;
+}
+
+.btn-outline-danger{
+    border: 0px;
+    background-color: #FF0000;;
+    color: var(--white);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-outline-danger:hover{
+    background-color: #b90101;
+}
+
+.btn-outline-warning{
+    border: 0px;
+    background-color: #41C9E2;
+    color: var(--white);
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.btn-outline-warning:hover{
+    background-color: #3099ac;
+}
+.cardDetails{
+    margin-left: 20px;
+}
+.cardDetail{
+    width: vw ;
+}
