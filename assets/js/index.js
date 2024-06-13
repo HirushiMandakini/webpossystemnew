@@ -1,3 +1,20 @@
+//menu button click and automatically hide
+document.addEventListener('DOMContentLoaded', function () {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarNav = document.querySelector('.navbar-nav');
+    var navLinks = document.querySelectorAll('.navbar-nav a'); // Select all nav links
+
+    navbarToggler.addEventListener('click', function () {
+        navbarNav.classList.toggle('active');
+    });
+
+    navLinks.forEach(function (navLink) {
+        navLink.addEventListener('click', function () {
+            navbarNav.classList.remove('active'); // Hide the navigation bar
+        });
+    });
+});
+
 // Get the canvas element
 const ctx = document.getElementById('lineChart').getContext('2d');
 

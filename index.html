@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flower Shop</title>
   <link rel="icon" type="image/png" href="assets/title one.png">
   <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ZenhVNpHmPQ0oW9R76g8gleU1HzwYAqPfD6NbJMVzJrQSqSYld7cyqUMeLtTTAw1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,43 +19,43 @@
   <div class="loader"></div>
 </div>
 
-
-
 <nav id="navBar" class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle custom-navbar">
     <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuBar">
-        <li class="nav-item">
-          <a class="nav-link active gradient-text" id="home_page" aria-current="page" href="#Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link gradient-text" id="customer_page" href="#customer">Customer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link gradient-text" id="item_page" href="#item">Item</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link gradient-text" id="order_page" href="#order">Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link gradient-text" id="order_details_page" href="#order_Details">Order Details</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuBar">
+            <li class="nav-item">
+                <a class="nav-link active gradient-text" id="home_page" aria-current="page" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link gradient-text" id="customer_page" href="#customer">Customer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link gradient-text" id="item_page" href="#item">Item</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link gradient-text" id="order_page" href="#order">Order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link gradient-text" id="order_details_page" href="#order_Details">Order Details</a>
+            </li>
+        </ul>
     </div>
-  </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+    </button>
 </nav>
 
-  <section class="home" id="Home">
+<section class="home" id="Home">
     <div class="maincontainer">
-      <div class="subonecontainer">
-        <h1 class="subonetext">Fresh Flowers & Perfect Gift <br>for your Loved ones</h1>
-        <p class="subtitle">Browse our collection of beautiful flowers and find the perfect gift for any occasion.</p>
-        <button class="shop-button">Shop Now</button>
-      </div>
-      <div class="subtwocontainer">
-        <img src="assets/pngwing.com.png" alt="flower image" class="flower-image">
-      </div>
+        <div class="subonecontainer">
+            <h1 class="subonetext">Fresh Flowers & Perfect Gift <br>for your Loved ones</h1>
+            <p class="subtitle">Browse our collection of beautiful flowers and find the perfect gift for any occasion.</p>
+            <button class="shop-button">Shop Now</button>
+        </div>
+        <div class="subtwocontainer">
+            <img src="assets/pngwing.com.png" alt="flower image" class="flower-image">
+        </div>
     </div>
-  </section>
+</section>
 
 <main id="customer" class="customer">
   <div class="customer1">
@@ -103,7 +106,7 @@
           <button id="search2" class="btn btn-outline-success cussearchBtn" type="button">Search</button>
         </form>
 
-        <div class="col m-3">
+        <div id="tableForCus" class="col m-3">
           <table class="custable" id="customerTable">
             <thead class="custable-color">
             <tr>
@@ -120,7 +123,6 @@
     </div>
   </div>
 </main>
-
 
 <main id="item" class="item">
   <div class="item1">
@@ -170,7 +172,7 @@
           <button id="search3" class="btn btn-outline-success searchBtn" type="button">Search</button>
         </form>
 
-        <div class="col m-3">
+        <div id="tableForItem" class="col m-3">
           <table class="itemtable" id="itemTable">
             <thead class="itemtable-color">
             <tr>
@@ -289,7 +291,7 @@
           <button id="removeBtn" type="button" class="btn btn-outline-danger">Remove</button>
           <button id="resetItemDetailsBtn" type="reset" class="btn btn-outline-warning">Reset</button>
         </div>
-        <div class="col m-3">
+        <div id="tableForOrder" class="col m-3">
           <table class="table" id="item-order-table">
             <thead class="order-table">
             <tr>
@@ -348,6 +350,7 @@
 </main>
 
 <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-bskAUcgyel5hjGgEF8sYeUA0xE9xB/fR8YO//lYJkYwgY9NyxbzYWt1+z4OGjP80" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

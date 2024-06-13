@@ -105,7 +105,7 @@ function showValidationError(title, text) {
         footer: '<a href="">Why do I have this issue?</a>'
     });
 }
-
+/*
 submit.on('click',function (){
     let itemCodeValue = itemId.val();
     let itemNameValue = itemName.val().trim();
@@ -132,7 +132,39 @@ submit.on('click',function (){
         populateItemTBL();
         resetColumns();
     }
-})
+})*/
+
+submit.on('click', function () {
+    let itemCodeValue = itemId.val();
+    let itemNameValue = itemName.val().trim();
+    let priceValue = parseFloat(price.val());
+    let qtyOnHandValue = parseInt(qty.val(), 10);
+
+    // Regex for letters only
+    let lettersOnlyRegex = /^[A-Za-z]+$/;
+
+    if (validation(itemNameValue, "Item Name", lettersOnlyRegex) &&
+        validation(priceValue, "Price", null) &&
+        validation(qtyOnHandValue, "Qty On Hand", null)) {
+        
+        let item = new ItemModel(
+            itemCodeValue,
+            itemNameValue,
+            priceValue,
+            qtyOnHandValue
+        );
+
+        Swal.fire(
+            'Save Successfully!',
+            'Successful',
+            'success'
+        );
+
+        item_db.push(item);
+        populateItemTBL();
+        resetColumns();
+    }
+});
 
 $('#itemTable').on('click', 'tbody tr', function(){
     let itemCodeValue = $(this).find('th').text();
