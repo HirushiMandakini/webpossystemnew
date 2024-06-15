@@ -300,25 +300,25 @@ body {
 
 /*end-Home*/
 /*Customer*/
-.customer1{
-    display:flex;
+.customer1 {
+    display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: 100vh; /* Set height to 100% of the viewport height */
     background-image: url(../lily.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .cuscard{
     width: 500px;
-    height: 700px;
+    height: 450px;
     padding: 20px 20px 20px 20px;
     background-color: var(--lavender);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
@@ -342,13 +342,17 @@ body {
     justify-content: right;
     margin-left: 50px;
 }
+.customer-form {
+    gap: 20px;
+}
 .custablecard{
     width: 600px;
+    height: 500px;
     padding: 10px 20px 20px 20px;
     background-color: var(--lavender);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
 }
 .custable-color>tr>th{
@@ -489,23 +493,24 @@ body {
 }
 
 /*item*/
+
 .item1{
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    height: 100vh;
     background-image: url(../flat-lay-gift-concept.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .itemcard{
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
     margin-left: 20px;
     width: 500px;
-    height: 700px;
+    height: 330px;
     padding: 20px 20px 20px 20px;
     background-color: var(--lavender);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -519,9 +524,10 @@ body {
     margin-top: 20px;
 }
 .itemtablecard{
-    margin-top: 20px;
+    margin-top: 80px;
     margin-bottom: 20px;
     width: 600px;
+    height: 350px;
     padding: 10px 20px 20px 20px;
     background-color: var(--lavender);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -661,16 +667,21 @@ body {
     margin-bottom: 20px;
     margin-left: 20px;
     width: 500px;
-    height: 700px;
+    height: 550px;
     left:  700px;
 }
 #orderDetails1{
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 700px;
+}
+.table {
+    margin-top: 20px;
+    width: 460px;
 }
 .order1{
     gap: 30px;
-    margin-bottom:20px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -710,7 +721,6 @@ body {
 #order-details-table{
     width: 100%;
 }
-
 .ordercard{
     width: 500px;
     gap: 20px;
